@@ -1,0 +1,74 @@
+@page "/postdata"
+@page "/postdata/{id:int}"
+
+@inject IPostService Service
+@inject IConfiguration Configuration
+
+<PageTitle>Post</PageTitle>
+
+@if (post.User != null)
+{
+    <h3>@post.Heading</h3>
+    <h6>@post.Text</h6>
+    <h7>@post.User.Username @post.Date @post.Votes upvotes</h7>
+}
+
+<br><br>
+
+<h5>Comments</h5>
+
+<br>
+
+@foreach (var comment in post.Comments)
+{
+    if (comment.User != null)
+    {
+        <h6>@comment.Text</h6>
+        <h7>@comment.User.Username  @comment.Date   @comment.Votes upvotes
+            <button class="btn btn-outline-primary btn-sm" @onclick="(() => Upvote(comment.CommentId))">↑</button>
+        </h7>
+        <br><br>
+    }
+}
+
+<br>
+
+<h5>Add a comment below</h5>
+
+<br>
+
+<EditForm Model="comment" OnSubmit="HandleSubmit">
+    <div>
+        <label for="text">Text</label>
+        <InputText id="text" @bind-Value="comment.Text" class="form-control"></InputText>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+    Post post = new Post { User = new() };
+    Comment comment = new Comment { UserId = 1 };
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id != null)
+        {
+            post = await Service.GetPost((int)Id);
+            comment.PostId = post.PostId;
+        }       
+    }
+
+    async Task HandleSubmit()
+    {
+        if (Id != null)
+            await Service.CreateComment((int)Id, comment);
+    }
+    
+    async Task Upvote(int id)
+    {
+        await Service.UpvoteComment(id);
+    }
+}

@@ -1,0 +1,43 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = TodoListBlazor
+build_property.RootNamespace = TodoListBlazor
+build_property.ProjectDir = /Users/victorpascale/Projects/3. Programmering/Miniprojekt_sqlserver/client/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/victorpascale/Projects/3. Programmering/Miniprojekt_sqlserver/client
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/victorpascale/Projects/3. Programmering/Miniprojekt_sqlserver/client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/victorpascale/Projects/3. Programmering/Miniprojekt_sqlserver/client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/victorpascale/Projects/3. Programmering/Miniprojekt_sqlserver/client/Pages/SinglePost.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2luZ2xlUG9zdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/victorpascale/Projects/3. Programmering/Miniprojekt_sqlserver/client/Pages/SubmitPost.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3VibWl0UG9zdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/victorpascale/Projects/3. Programmering/Miniprojekt_sqlserver/client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/victorpascale/Projects/3. Programmering/Miniprojekt_sqlserver/client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-b50vsdrneq

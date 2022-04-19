@@ -1,0 +1,57 @@
+@page "/submitnewpost"
+
+@inject IPostService Service
+@inject IConfiguration Configuration
+
+
+<PageTitle>Submit Post</PageTitle>
+
+<h4>Submit post</h4>
+
+<EditForm Model="post" OnSubmit="HandleSubmit">
+    <div>
+        <label for="heading">Heading</label>
+        <InputText id="heading" @bind-Value="post.Heading" class="form-control"></InputText>
+    </div>
+    <div>
+        <label for="text">Text</label>
+        <InputText id="text" @bind-Value="post.Text" class="form-control"></InputText>
+    </div>
+    <div>
+        <label>Topic</label><br />
+        <InputSelect @bind-Value="post.TopicId" class="form-select">
+        <option>Select topic</option>
+        @foreach (var topic in Service.Topics)
+        {
+            <option value="@topic.TopicId">@topic.Text</option>
+        }
+        </InputSelect>
+    </div>
+    <div>
+        <label>User</label><br />
+        <InputSelect @bind-Value="post.UserId" class="form-select">
+        <option>Select user</option>
+        @foreach (var user in Service.Users)
+        {
+            <option value="@user.UserId">@user.Username</option>
+        }
+        </InputSelect>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</EditForm>
+
+@code {
+    Post post = new Post { Topic = new(), User = new() };
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Service.GetTopics();
+        await Service.GetUsers();
+    }
+
+    private async Task HandleSubmit()
+    {
+        await Service.CreatePost(post);
+    }
+}
