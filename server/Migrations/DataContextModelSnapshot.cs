@@ -58,7 +58,7 @@ namespace TodoApi.Migrations
                         new
                         {
                             CommentId = 1,
-                            Date = new DateTime(2022, 4, 19, 11, 29, 28, 874, DateTimeKind.Local).AddTicks(6090),
+                            Date = new DateTime(2022, 4, 20, 18, 14, 7, 882, DateTimeKind.Local).AddTicks(7780),
                             PostId = 1,
                             Text = "Programmering er sjovt",
                             UserId = 1,
@@ -67,7 +67,7 @@ namespace TodoApi.Migrations
                         new
                         {
                             CommentId = 2,
-                            Date = new DateTime(2022, 4, 19, 11, 29, 28, 874, DateTimeKind.Local).AddTicks(6100),
+                            Date = new DateTime(2022, 4, 20, 18, 14, 7, 882, DateTimeKind.Local).AddTicks(7780),
                             PostId = 2,
                             Text = "Mig :)",
                             UserId = 1,
@@ -115,7 +115,7 @@ namespace TodoApi.Migrations
                         new
                         {
                             PostId = 1,
-                            Date = new DateTime(2022, 4, 19, 11, 29, 28, 874, DateTimeKind.Local).AddTicks(6020),
+                            Date = new DateTime(2022, 4, 20, 18, 14, 7, 882, DateTimeKind.Local).AddTicks(7710),
                             Heading = "Hvorfor har Kristians fag større fremmøde?",
                             Text = "",
                             TopicId = 1,
@@ -125,7 +125,7 @@ namespace TodoApi.Migrations
                         new
                         {
                             PostId = 2,
-                            Date = new DateTime(2022, 4, 19, 11, 29, 28, 874, DateTimeKind.Local).AddTicks(6070),
+                            Date = new DateTime(2022, 4, 20, 18, 14, 7, 882, DateTimeKind.Local).AddTicks(7760),
                             Heading = "Hvem skal med til Grundfos?",
                             Text = "",
                             TopicId = 2,

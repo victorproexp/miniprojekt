@@ -22,7 +22,7 @@ public class PostService : IPostService
     public List<Post> Posts { get; set; } = new();
     public List<Topic> Topics { get; set; } = new();
     public List<User> Users { get; set; } = new();
-    public List<Comment> Comments { get; set; } = new();
+    //public List<Comment> Comments { get; set; } = new();
 
     public async Task GetTopics()
     {
@@ -62,7 +62,7 @@ public class PostService : IPostService
             return result;
         throw new Exception("Post was not found!");
     }
-
+    /*
     public async Task GetComments()
     {
         string url = $"{_baseAPI}comments/";
@@ -71,7 +71,7 @@ public class PostService : IPostService
         {
             Comments = result;
         }
-    }
+    }*/
 
     public async Task CreatePost(Post data)
     {

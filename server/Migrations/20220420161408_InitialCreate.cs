@@ -90,8 +90,8 @@ namespace TodoApi.Migrations
                         name: "FK_Comments_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "UserId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "UserId");
+                        //onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
@@ -118,22 +118,22 @@ namespace TodoApi.Migrations
             migrationBuilder.InsertData(
                 table: "Posts",
                 columns: new[] { "PostId", "Date", "Heading", "Text", "TopicId", "UserId", "Votes" },
-                values: new object[] { 1, new DateTime(2022, 4, 19, 11, 29, 28, 874, DateTimeKind.Local).AddTicks(6020), "Hvorfor har Kristians fag større fremmøde?", "", 1, 1, 0 });
+                values: new object[] { 1, new DateTime(2022, 4, 20, 18, 14, 7, 882, DateTimeKind.Local).AddTicks(7710), "Hvorfor har Kristians fag større fremmøde?", "", 1, 1, 0 });
 
             migrationBuilder.InsertData(
                 table: "Posts",
                 columns: new[] { "PostId", "Date", "Heading", "Text", "TopicId", "UserId", "Votes" },
-                values: new object[] { 2, new DateTime(2022, 4, 19, 11, 29, 28, 874, DateTimeKind.Local).AddTicks(6070), "Hvem skal med til Grundfos?", "", 2, 1, 0 });
+                values: new object[] { 2, new DateTime(2022, 4, 20, 18, 14, 7, 882, DateTimeKind.Local).AddTicks(7760), "Hvem skal med til Grundfos?", "", 2, 1, 0 });
 
             migrationBuilder.InsertData(
                 table: "Comments",
                 columns: new[] { "CommentId", "Date", "PostId", "Text", "UserId", "Votes" },
-                values: new object[] { 1, new DateTime(2022, 4, 19, 11, 29, 28, 874, DateTimeKind.Local).AddTicks(6090), 1, "Programmering er sjovt", 1, 0 });
+                values: new object[] { 1, new DateTime(2022, 4, 20, 18, 14, 7, 882, DateTimeKind.Local).AddTicks(7780), 1, "Programmering er sjovt", 1, 0 });
 
             migrationBuilder.InsertData(
                 table: "Comments",
                 columns: new[] { "CommentId", "Date", "PostId", "Text", "UserId", "Votes" },
-                values: new object[] { 2, new DateTime(2022, 4, 19, 11, 29, 28, 874, DateTimeKind.Local).AddTicks(6100), 2, "Mig :)", 1, 0 });
+                values: new object[] { 2, new DateTime(2022, 4, 20, 18, 14, 7, 882, DateTimeKind.Local).AddTicks(7780), 2, "Mig :)", 1, 0 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Comments_PostId",
